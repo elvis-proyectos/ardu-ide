@@ -1,17 +1,14 @@
-import type { NextConfig } from "next";
+// next.config.js
 
-const nextConfig: NextConfig = {
-  reactStrictMode: true,  // Habilitar el modo estricto de React (recomendado para desarrollo)
+const nextConfig = {
+  /* Aquí van tus configuraciones */
+  reactStrictMode: true,
   experimental: {
-    // Si estás usando alguna opción experimental, asegúrate de que sea válida
-    // Ejemplo: desactivar el precargado de documentos para mejorar rendimiento
-    appDir: true, // Activar el nuevo sistema de enrutamiento basado en 'app'
+    appDir: true,
   },
-  // Otras configuraciones que podrías necesitar
   webpack(config) {
-    // Configuración personalizada de webpack si es necesario
     return config;
   }
 };
 
-export default nextConfig;
+module.exports = nextConfig; // Usar 'module.exports' en lugar de 'export default'
